@@ -1,9 +1,1 @@
-[submodule "public/bootstrap"]
-	path = public/bootstrap
-	url = https://github.com/twitter/bootstrap
-[submodule "facebook-timeline-html-css"]
-	path = facebook-timeline-html-css
-	url = https://github.com/rmdort/facebook-timeline-html-css
-[submodule "public/timeline-html-css"]
-	path = public/timeline-html-css
-	url = https://github.com/rmdort/facebook-timeline-html-css
+
