@@ -42,7 +42,7 @@ exports.index = function (req, res) {
     console.log(facebookRes);
     graph
       .setOptions(options)
-      .get("zuck", function (err, res) {
+      .get("zuck/notes", function (err, res) {
         if (err)
           console.log(err);
         else
