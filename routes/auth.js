@@ -7,7 +7,7 @@ var graph = require('fbgraph');
 // Module level constants
 var CLIENT_ID = '394935803933737';
 var APP_SECRET = 'e209282a5bd5b1836d838e24b17652ee';
-var REDIRECT_URI = 'http://faceblog.herokuapp.com/auth';
+var REDIRECT_URI = '/auth/facebook';
 
 var options = {
     timeout:  3000,
@@ -22,6 +22,7 @@ exports.index = function (req, res) {
       "client_id"   :     CLIENT_ID,
       "redirect_uri":  REDIRECT_URI
     });
+
     if (!req.query.error) {
       res.redirect(authUrl);
     } else {
@@ -39,17 +40,13 @@ exports.index = function (req, res) {
     "client_secret":  APP_SECRET,
     "code":           req.query.code
   }, function (err, facebookRes) {
-    console.log(facebookRes);
-    graph
-      .setOptions(options)
-      .get("zuck/notes", function (err, res) {
-        if (err)
-          console.log(err);
-        else
-          console.log(res);
-      });
-
-    res.redirect('/ITWORKS');
+    if (!err) {
+      graph
+        .setOptions(options)
+        .get("me/notes", function (err, res) {
+          if (err) console.log(err);
+        });
+    }
   });
 
 };

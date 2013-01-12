@@ -8,8 +8,7 @@ var express = require('express')
   , auth = require('./routes/auth')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path')
-  , everyauth = require('everyauth');
+  , path = require('path');
 
 var app = express();
 
@@ -33,7 +32,7 @@ app.configure('development', function () {
 });
 
 app.get('/', routes.index);
-app.get('/auth', auth.index);
+app.get('/auth/facebook', auth.index);
 app.get('/trending', routes.index);
 
 http.createServer(app).listen(app.get('port'), function () {
