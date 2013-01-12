@@ -43,7 +43,10 @@ exports.index = function (req, res) {
     graph
       .setOptions(options)
       .get("me", function (err, res) {
-        console.log(res);
+        if (err)
+          console.log(err);
+        else
+          console.log(res);
       });
 
     res.redirect('/ITWORKS');
