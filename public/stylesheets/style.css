@@ -13,3 +13,11 @@ a {
 .login-button {
 	margin-top: 13px;
 }
+
+#faceblog .navbar-inner {
+	background: #3B5998;
+}
+
+#faceblog .navbar-inverse .brand {
+	color: #fff;
+}
