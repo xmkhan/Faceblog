@@ -8,7 +8,8 @@ var express = require('express')
   , auth = require('./routes/auth')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , everyauth = require('everyauth');
 
 var app = express();
 
@@ -21,7 +22,7 @@ app.configure(function () {
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser('your secret here'));
-  // app.use(express.session());
+  app.use(express.session({secret: "arvin"}));
   app.use(app.router);
   // app.use(require('stylus').middleware(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'public')));

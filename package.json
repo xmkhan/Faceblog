@@ -15,6 +15,7 @@
     "stylus": "*",
     "node-redis": "~0.1.5",
     "fbgraph": "~0.2.6",
-    "redis-url": "~0.1.0"
+    "redis-url": "~0.1.0",
+    "everyauth": "~0.3.1"
   }
 }
