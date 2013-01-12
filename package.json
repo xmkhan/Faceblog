@@ -2,7 +2,7 @@
   "name": "faceblog",
   "version": "0.0.1",
   "private": true,
-  "engines" : {
+  "engines": {
     "node": "0.8.11",
     "npm": "1.1.65"
   },
@@ -14,6 +14,7 @@
     "ejs": "*",
     "stylus": "*",
     "node-redis": "~0.1.5",
-    "fbgraph": "~0.2.6"
+    "fbgraph": "~0.2.6",
+    "redis-url": "~0.1.0"
   }
 }
