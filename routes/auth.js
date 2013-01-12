@@ -7,7 +7,7 @@ var graph = require('fbgraph');
 // Module level constants
 var CLIENT_ID = '394935803933737';
 var APP_SECRET = 'e209282a5bd5b1836d838e24b17652ee';
-var REDIRECT_URI = '/auth/facebook';
+var REDIRECT_URI = 'http://faceblog.herokuapp.com/auth/facebook';
 
 var options = {
     timeout:  3000,
@@ -46,6 +46,8 @@ exports.index = function (req, res) {
         .get("me/notes", function (err, res) {
           if (err) console.log(err);
         });
+    } else {
+      console.log(err);
     }
   });
 
