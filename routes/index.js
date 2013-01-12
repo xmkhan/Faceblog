@@ -25,6 +25,7 @@ exports.index = function (req, res) {
     "client_secret":  APP_SECRET,
     "code":           req.query.code
   }, function (err, facebookRes) {
+    console.log(facebookRes);
     res.redirect('/loggedIn');
   });
 
