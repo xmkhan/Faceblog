@@ -25,7 +25,7 @@ exports.index = function (req, res) {
     if (!req.query.error) {
       res.redirect(authUrl);
     } else {
-      console.log(req.query.error);
+      console.log("ERROR: " + req.query.error);
       res.send('access denied');
     }
     return;
@@ -42,7 +42,7 @@ exports.index = function (req, res) {
     console.log(facebookRes);
     graph
       .setOptions(options)
-      .get("me", function (err, res) {
+      .get("zuck", function (err, res) {
         if (err)
           console.log(err);
         else
