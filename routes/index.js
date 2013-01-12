@@ -26,7 +26,7 @@ exports.index = function (req, res) {
     "code":           req.query.code
   }, function (err, facebookRes) {
     console.log(facebookRes);
-    res.redirect('/loggedIn');
+    if (facebookRes && !facebookRes.error) res.redirect('/loggedIn');
   });
 
   // shows dialog
