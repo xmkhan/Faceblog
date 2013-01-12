@@ -41,14 +41,10 @@ exports.index = function (req, res) {
     "code":           req.query.code
   }, function (err, facebookRes) {
     if (!err) {
-      graph
-        .setOptions(options)
-        .get("me/notes", function (err, res) {
-          if (err) console.log(err);
-        });
-    } else {
-      console.log(err);
+      console.log(facebookRes);
+      res.redirect('/loggedIn');
     }
+
   });
 
 };
