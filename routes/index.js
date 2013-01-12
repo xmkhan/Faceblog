@@ -34,7 +34,7 @@ exports.index = function (req, res) {
     "code":           req.query.code
   }, function (err, facebookRes) {
     console.log(facebookRes);
-    if (facebookRes && !facebookRes.error) res.redirect('/loggedIn');
+    res.redirect('/loggedIn');
   });
 
 };
