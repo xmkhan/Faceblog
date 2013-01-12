@@ -16,7 +16,7 @@ exports.index = function (req, res) {
     "redirect_uri":  REDIRECT_URI
   });
 
-
+  /**
   // after user click, auth `code` will be set
   // we'll send that and get the access token
   graph.authorize({
@@ -28,6 +28,7 @@ exports.index = function (req, res) {
     console.log(facebookRes);
     if (facebookRes && !facebookRes.error) res.redirect('/loggedIn');
   });
+  */
 
   // shows dialog
   res.redirect(authUrl);
